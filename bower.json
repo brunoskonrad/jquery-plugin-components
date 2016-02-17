@@ -1,0 +1,25 @@
+{
+  "name": "jquery-plugin-componets",
+  "description": "Auto initialize your plugins via HTML data attributes",
+  "main": "dist/index.min.js",
+  "authors": [
+    "Bruno Konrad <bruno.skon@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "jquery",
+    "plugins",
+    "auto",
+    "initialization",
+    "components"
+  ],
+  "homepage": "https://github.com/brunoskonrad/jquery-plugin-components",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
