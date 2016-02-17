@@ -1,5 +1,5 @@
 {
-  "name": "jquery-plugin-componets",
+  "name": "jquery-plugin-components",
   "description": "Auto initialize your plugins via HTML data attributes",
   "main": "dist/index.min.js",
   "authors": [
