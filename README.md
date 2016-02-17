@@ -13,6 +13,20 @@ Initialize your jQuery plugins via data attributes.
 
 This element will be initialized as a `date-picker` jQuery plugin.
 
+## Install
+
+Via bower:
+```
+bower install --save jquery-plugin-components
+```
+
+Via npm:
+```
+npm install --save jquery-plugin-components
+```
+
+Or get the minified file at: [https://raw.githubusercontent.com/brunoskonrad/jquery-plugin-components/master/dist/index.min.js](https://raw.githubusercontent.com/brunoskonrad/jquery-plugin-components/master/dist/index.min.js)
+
 ## Usage
 
 Simply import the `jquery-plugin-components` script after the DOM's rendering, e.g.
