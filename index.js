@@ -6,18 +6,19 @@ function convert(str) {
 
 function initialize($) {
   $('[data-component]').each(function() {
-    var component;
+    var component, options;
     var $this = $(this);
-    var plugin = $this.attr('data-component');
+    var plugin = $this.data('component');
 
     if (!plugin) {
       return;
     }
 
     component = convert(plugin);
+    options = $this.data();
 
     if (component in $this) {
-      $this[component]();
+      $this[component](options);
     }
   });
 }

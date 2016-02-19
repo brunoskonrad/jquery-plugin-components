@@ -33,11 +33,18 @@ Simply import the `jquery-plugin-components` script after the DOM's rendering, e
 
 ```html
 <body>
-  <div data-component="date-picker"></div>
+  <div data-component="date-picker" data-date="01/01/2016"
+    data-format="dd/MM/yyyy"></div>
 
   <script src="vendor/date_picker.min.js"></script>
   <script src="vendor/jquery-plugin-components.min.js"></script>
 </body>
+```
+
+You can pass options by using any `data-parameters`, as in the example above. Note that the `data-date` and `data-format` will be passed to `datePicker`'s  plugin inside an object, like:
+
+```javascript
+$('div').datePicker({date: '01/01/2016', format: 'dd/MM/yyyy'});
 ```
 
 ## Contributing

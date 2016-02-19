@@ -2,6 +2,7 @@ describe('initialize jQuery plugins as components', function() {
   beforeEach(function() {
     $.fn.somePlugin = jasmine.createSpy('some plugin');
     $.fn.plugin = jasmine.createSpy('plugin');
+    $.fn.carousel = jasmine.createSpy('carousel');
   });
 
   afterEach(function() {
@@ -37,6 +38,23 @@ describe('initialize jQuery plugins as components', function() {
 
       expect($.fn.plugin).toHaveBeenCalled();
       expect($.fn.somePlugin).toHaveBeenCalled();
+    });
+  });
+
+  describe('initializes getting data attributes options', function() {
+    it('fo', function() {
+      var fixture = '<div data-component="carousel" ' +
+        'data-itens="3" data-infinite="true" data-name="selly">' +
+        '</div>';
+      $('body').append(fixture);
+
+      initialize(jQuery);
+
+      expect($.fn.carousel).toHaveBeenCalledWith(jasmine.objectContaining({
+        itens: 3,
+        infinite: true,
+        name: 'selly'
+      }));
     });
   });
 });
