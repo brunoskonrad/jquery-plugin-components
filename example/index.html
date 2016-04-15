@@ -1,0 +1,32 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Plugin components Example</title>
+</head>
+<body>
+  <p data-component="color">
+    Hello World
+  </p>
+
+  <div data-container>
+    <p data-component="color" data-color="#19b00c">
+      I'm very green
+    </p>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script>
+    $.fn.color = function(options) {
+      var color = options.color || 'red';
+      $(this).css('color', color);
+
+      return this;
+    }
+  </script>
+  <script src="../index.js"></script>
+  <script>
+    $('[data-container]').startComponents();
+    $('body').startComponents();
+  </script>
+</body>
+</html>
