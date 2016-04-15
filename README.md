@@ -25,11 +25,11 @@ Via npm:
 npm install --save jquery-plugin-components
 ```
 
-Or get the minified file at: [https://raw.githubusercontent.com/brunoskonrad/jquery-plugin-components/master/dist/index.min.js](https://raw.githubusercontent.com/brunoskonrad/jquery-plugin-components/master/dist/index.min.js)
+Or get the minified file inside `dist/index.min.js`.
 
 ## Usage
 
-Simply import the `jquery-plugin-components` script after the DOM's rendering, e.g.
+Call the jQuery plugin `startComponents` on any element, e.g.
 
 ```html
 <body>
@@ -38,6 +38,9 @@ Simply import the `jquery-plugin-components` script after the DOM's rendering, e
 
   <script src="vendor/date_picker.min.js"></script>
   <script src="vendor/jquery-plugin-components.min.js"></script>
+  <script>
+    $('body').startComponents();
+  </script>
 </body>
 ```
 
@@ -46,6 +49,8 @@ You can pass options by using any `data-parameters`, as in the example above. No
 ```javascript
 $('div').datePicker({date: '01/01/2016', format: 'dd/MM/yyyy'});
 ```
+
+You can check an example inside `example` folder.
 
 ## Contributing
 
